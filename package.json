@@ -1,0 +1,24 @@
+{
+  "name": "unit3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ancestry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JMGoebel/unit3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JMGoebel/unit3/issues"
+  },
+  "homepage": "https://github.com/JMGoebel/unit3#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-plugin-react": "^7.6.0"
+  }
+}
