@@ -1,0 +1,45 @@
+<head>
+  <title>Mouse Trails</title>
+</head>
+<body>
+    Length: <input type="text">
+  <div id="container"></div>               
+</body>
+<script>
+  var input = document.querySelector("input");
+  var container = document.querySelector("#container");
+  var trail = []
+  var style = "position: absolute; width: 10px; height: 10px; background-color: green;"
+  
+  function timeout(event, trails, time) {
+    trail.forEach( (x) => { 
+      setTimeout(() => {
+        x.style.top = event.y
+        x.style.left = event.x
+      }, time)
+      time += 15;
+    })
+  }
+
+  function makedivs(length){
+    // clear children
+    container.innerHTML = "";
+
+    for(; length > 0; length--){
+      let el = document.createElement("div")
+      el.style = style;
+      el.style.width = length / 5
+      el.style.height = length / 5
+      container.appendChild(el)
+    }
+  }
+
+  input.addEventListener("keyup", (event) => {
+    makedivs(input.value);
+    trail = document.querySelectorAll('#container div');
+  })
+
+  document.addEventListener("mousemove", (event) => {
+    timeout(event, trail, 15);
+  })
+</script>
