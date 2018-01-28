@@ -14,7 +14,7 @@ females.forEach( (person) => { byName[person.name] = person; } );
 // find the avg age diff of listed mothers and children
 let avg_age = (ANCESTRY.reduce( (total, person) => {
   if (byName[person.mother] !== undefined){
-    return [ total[0] + (person.born - byName[person.mother].born) , total[1] + 1];
+    return [ total[0] + (person.born - byName[person.mother].born) , total[1] + 1];   
   }
   return [ total[0], total[1] ];
 }, [0,0])); 
