@@ -13,7 +13,7 @@ printPyramid(5);
  *       #####
  *      ######
  */
-function printPyramid(height) {
+function printPyramid(height) { 
   // print that pyramid!
   for(let x = height; x > 0; x--){
     let layer = "";
